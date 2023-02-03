@@ -2,13 +2,21 @@
     margin: 0;
     padding: 0;
 }
+
 /* Header */
-header {
+
+/* header {
+    padding: 30px 75px;
+} */
+
+.navbar {
     padding: 30px 75px;
     display: flex;
+    position: relative;
     justify-content: space-between;
     align-items: center;
     background-color: rgba(49, 47, 48, 255);
+    color: white;
 }
 
 nav ul {
@@ -17,7 +25,8 @@ nav ul {
 }
 
 nav li {
-    margin-right: 40px;
+    margin-left: 40px;
+    position: relative;
 }
 
 nav a {
@@ -39,17 +48,38 @@ nav a {
 .logo:hover{
     width: 120px;
 }
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
 /* Showcase */
 #showcase img{
   object-fit: cover;
-  max-height: 650px;
+  height: 650px;
   width: 100%;
-  height: auto;
   filter: brightness(0.2);
 }
 
+.span-showcase {
+    color: orange;
+}
 .showcase-img{
-  position: relative;
+    position: relative;
 }
 
 .showcase-text {
@@ -93,7 +123,6 @@ nav a {
 
 .cards-section p {
     padding-top: 45px;
-    /* padding-left: 50px; */
 }
 /* Mid Section */
 .mid-section {
@@ -111,18 +140,23 @@ nav a {
 }
 
 .row img {
-    width: 30%;
+    max-width: 100%;
+    height: auto;
 }
-
+.mid-img {
+    width: 40%;
+}
 .mid-text {
     width: 40%;
-    padding-left: 50px;
+    /* padding-left: 50px; */
     margin-left: 4em;
+    font-size: 2vh;
 }
 
 .mid-text2 {
     width: 40%;
     margin-right: 5em;
+    font-size: 2vh;
 }
 
 /* Mid-Banner */
@@ -215,19 +249,18 @@ nav a {
     margin: 0 110px;
   }
 
+.testimonial-header {
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+}
+
 .quotation {
     rotate: 180deg;
     opacity: 0.5;
     float: left;
     margin-top: -20px;
     margin-right: -45px;
-}
-
-.testimonial-header {
-    font-size: 20px;
-    color: black;
-    font-weight: bold;
-
 }
 
 .test-img {
@@ -297,6 +330,7 @@ section#bottom-banner{
 
 /* Footer */
 footer {
+    
     margin-top: -20px;
     justify-content: space-between;
     text-align: center;
@@ -312,3 +346,73 @@ footer {
     padding: 10px 0;
     color: rgb(96, 94, 95);
 }
+
+@media screen and (max-width: 600px) {
+    .card {
+      width: 50%;
+    }
+
+    .mid-img, .mid-text, .mid-text2{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .footer {
+        max-height: 20px;
+        padding-bottom: 0;
+        margin: 0;
+    }
+
+    .logo:hover {
+        width: 90px;
+    }
+}
+
+
+  @media only screen and (max-width: 800px) {
+    .t-header-w { grid-area: 1 / 1; }
+    .t-text-w { grid-area: 2 / 1; }
+    .t-img-w { grid-area: 3 / 1; }
+    .t-header-m { grid-area: 4 / 1 ; }
+    .t-text-m { grid-area: 5 / 1; }
+    .t-img-m { grid-area: 6 / 1; }
+  }
+
+  @media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    nav a:hover {
+        border-bottom: none;
+      }
+}
+
+    

@@ -8,17 +8,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <header>
+        <nav class="navbar">
         <div>
             <img src="images/logo.png" alt="Logo" class="logo"> 
         </div>
-        <nav>
-          <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Who We Are</a></li>
-            <li><a href="#">What We Do</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
+        
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+              </a>
+          <div class="navbar-links">
+              <ul>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Who We Are</a></li>
+                  <li><a href="#">What We Do</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+          </div>
         </nav>
     </header>
     <main>
@@ -27,7 +36,7 @@
           <div class="showcase-img">
               <img src="images/shaking hands-min.jpg" alt="showcase">
               <div class="showcase-text">
-                  <h1>Your Successful Website Title</h1>
+                  <h1>Your Successful <span class="span-showcase">Website Title</span></h1>
                   <p>"The first rule of any technogoly used in a business is that automation applied to an efficient operation will magnify the efficiency. The second is that aytomation applied to an inefficient operation will magnify the inefficiency."</p>
                   <h5>- Bill Gates</h5>
               </div>
@@ -62,7 +71,10 @@
         <section>
         <div class="mid-section">
             <div class="row">
-                <img src="images/team collaborating-min.jpg" alt="team">
+                <div class="mid-img">
+                    <img src="images/team collaborating-min.jpg" alt="team">
+                </div>
+
                 <div class="mid-text">
                     <h2>Goals We Can Help You Achieve</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eius accusantium similique eveniet laboriosam, consequuntur quos, impedit fugit corporis necessitatibus sapiente quod. Illum esse ex omnis, laboriosam iusto sint maxime maiores beatae sed officia in libero distinctio doloremque fugiat placeat quod, veritatis unde cum quaerat eaque doloribus incidunt labore explicabo?</p>
@@ -73,7 +85,10 @@
                     <h2>It All Starts With Strategy</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora totam dignissimos sit molestiae ea enim assumenda repudiandae libero ipsam amet nostrum quae harum illum, non quam autem. Debitis, quaerat cupiditate! Ducimus culpa itaque molestias, quam ut modi facere similique nesciunt nostrum ab labore enim quis earum sed, accusantium tempore dolorum.</p>
                 </div>
-                <img src="images/meeting room-min.jpg" alt="meeting room">
+                <div class="mid-img">
+                    <img src="images/meeting room-min.jpg" alt="meeting room">
+                </div>
+
             </div>
         </div>   
         </section>
@@ -101,14 +116,17 @@
         <!-- Testimonial -->
         <section>
             <div class="testimonial">
-                <div><p class="testimonial-header">Testimonial</p></div>
-                <div><p class="testimonial-header">Testimonial</p></div>
-                <div><img src="icons/quotation mark.png" alt="quotation" width="50px" height="40px" class="quotation"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque sint harum, voluptates nulla perspiciatis voluptatum esse nihil quod voluptatem sequi ipsum possimus assumenda illum quae.</p></div>
-                <div><img src="icons/quotation mark.png" alt="quotation" width="50px" height="40px" class="quotation"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates necessitatibus, sit ex qui nihil alias explicabo. Quibusdam eos vel recusandae voluptates explicabo ea, delectus velit!</p></div>  
-                <div class="test-container"><img src="images/female headshot-min.jpg" alt="testimonial" width="90px" height="90px" class="test-img">
+                <div class="t-header-w"><p class="testimonial-header">Testimonial</p></div>
+                <div class="t-header-m"><p class="testimonial-header">Testimonial</p></div>
+                <div class="t-text-w"><img src="icons/quotation mark.png" alt="quotation" width="50px" height="40px" class="quotation"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque sint harum, voluptates nulla perspiciatis voluptatum esse nihil quod voluptatem sequi ipsum possimus assumenda illum quae.</p></div>
+
+                <div class="t-text-m"><img src="icons/quotation mark.png" alt="quotation" width="50px" height="40px" class="quotation"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates necessitatibus, sit ex qui nihil alias explicabo. Quibusdam eos vel recusandae voluptates explicabo ea, delectus velit!</p></div>
+
+                <div class="test-container t-img-w"><img src="images/female headshot-min.jpg" alt="testimonial" width="90px" height="90px" class="test-img">
                     <div class="text-container"><p style="font-weight: bold;">Jane Doe</p><p>CEO, Business Solutions</p></div>  
                 </div>
-                <div class="test-container"><img src="images/male headshot-min.jpg" alt="testimonial" width="90px" height="90px" class="test-img">
+
+                <div class="test-container t-img-m"><img src="images/male headshot-min.jpg" alt="testimonial" width="90px" height="90px" class="test-img">
                     <div class="text-container"><p style="font-weight: bold;">John Doe</p><p>CEO, Business Solutions</p></div>  
                 </div>  
             </div> 
@@ -133,5 +151,6 @@
         </div>
     </footer>
     
+<script src="script.js"></script>
 </body>
 </html>
